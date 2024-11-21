@@ -15,6 +15,12 @@ void OpenFile(vector<string> &poem)
     {
         cout << "open" << endl;
     }
+    string line;
+    while (getline(in, line))
+    {
+        poem.push_back(line);
+    }
+    in.close();
 }
 void ReadingFile()
 {
