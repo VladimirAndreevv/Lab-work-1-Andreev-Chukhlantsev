@@ -2,8 +2,22 @@
 
 using namespace std;
 
+void OpenFile()
+{
+
+}
+void ReadingFile()
+{
+
+}
+void RecordFile()
+{
+
+}
+
 int main()
 {
-    cout << "Hello world!" << endl;
-    return 0;
+  void OpenFile();
+  void ReadingFile();
+  void RecordFile();
 }
