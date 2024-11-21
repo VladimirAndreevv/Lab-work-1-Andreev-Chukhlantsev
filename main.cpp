@@ -22,20 +22,34 @@ void OpenFile(vector<string> &poem)
     }
     in.close();
 }
-void ReadingFile()
+void ReadingFile(vector<string> &poem)
 {
-
+    for (vector<string>::iterator it=poem.begin(); it!=poem.end(); it++)
+    {
+        string x = *it;
+        cout << x << endl;
+    }
 }
-void RecordFile()
+void RecordFile(const string& name, vector<string> &poem)
 {
-
+    ofstream output_file(name);
+    for (const auto& line : poem) {
+        output_file << line << endl;
+    }
+    output_file.close();
 }
 
 int main()
 {
-vector<string> poem;
-  OpenFile(poem);
-  ReadingFile();
-  RecordFile();
-  return 0;
+
+    /* vector<string> poem = {
+        "first string",
+        "second string",
+        "third string"
+    }; */
+    vector<string> poem;
+    OpenFile(poem);
+    ReadingFile(poem);
+    string name = "output.txt";
+    RecordFile(name, poem);
 }
