@@ -1,4 +1,7 @@
 #include <iostream>
+#include <vector>
+#include <fstream>
+#include <sstream>
 
 using namespace std;
 
@@ -6,9 +9,13 @@ void OpenFile()
 {
 
 }
-void ReadingFile()
+void ReadingFile(vector<string> &poem)
 {
-
+    for (vector<string>::iterator it=poem.begin(); it!=poem.end(); it++)
+    {
+        string x = *it;
+        cout << x << endl;
+    }
 }
 void RecordFile()
 {
@@ -17,7 +24,9 @@ void RecordFile()
 
 int main()
 {
-  void OpenFile();
-  void ReadingFile();
-  void RecordFile();
+
+    OpenFile();
+    ReadingFile();
+    RecordFile();
+
 }
